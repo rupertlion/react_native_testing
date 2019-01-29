@@ -25,8 +25,8 @@ export default class HomeScreen extends React.Component {
             <Image
               source={
                 __DEV__
-                  ? require('../assets/images/robot-dev.png')
-                  : require('../assets/images/robot-prod.png')
+                  ? require('../assets/images/tribal logo.png')
+                  : require('../assets/images/tribal logo.png')
               }
               style={styles.welcomeImage}
             />
@@ -35,14 +35,15 @@ export default class HomeScreen extends React.Component {
           <View style={styles.getStartedContainer}>
             {this._maybeRenderDevelopmentModeWarning()}
 
-            <Text style={styles.getStartedText}>Get started by opening</Text>
+            <Text style={styles.getStartedText}>This is Tribal in React Native</Text>
 
+            <Text style={styles.getStartedText}>Find us at:</Text>
             <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-              <MonoText style={styles.codeHighlightText}>screens/HomeScreen.js</MonoText>
+              <MonoText style={styles.codeHighlightText}>www.tribalapp.me</MonoText>
             </View>
 
             <Text style={styles.getStartedText}>
-              Change this text and your app will automatically reload.
+              Let's get this personal training app going!!
             </Text>
           </View>
 
@@ -54,10 +55,8 @@ export default class HomeScreen extends React.Component {
         </ScrollView>
 
         <View style={styles.tabBarInfoContainer}>
-          <Text style={styles.tabBarInfoText}>This is a tab bar. You can edit it in:</Text>
-
           <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
-            <MonoText style={styles.codeHighlightText}>navigation/MainTabNavigator.js</MonoText>
+            <MonoText style={styles.codeHighlightText}>Navigation Bar for Tribal</MonoText>
           </View>
         </View>
       </View>
@@ -66,16 +65,15 @@ export default class HomeScreen extends React.Component {
 
   _maybeRenderDevelopmentModeWarning() {
     if (__DEV__) {
-      const learnMoreButton = (
-        <Text onPress={this._handleLearnMorePress} style={styles.helpLinkText}>
-          Learn more
+      const tribalSiteButton = (
+        <Text onPress={this._handleTribalSiteRedirect} style={styles.helpLinkText}>
+          Learn more about Tribal
         </Text>
       );
 
       return (
         <Text style={styles.developmentModeText}>
-          Development mode is enabled, your app will be slower but you can use useful development
-          tools. {learnMoreButton}
+          This is just a test app in development mode, but you can find out more on our website. {tribalSiteButton}
         </Text>
       );
     } else {
@@ -87,8 +85,8 @@ export default class HomeScreen extends React.Component {
     }
   }
 
-  _handleLearnMorePress = () => {
-    WebBrowser.openBrowserAsync('https://docs.expo.io/versions/latest/guides/development-mode');
+  _handleTribalSiteRedirect = () => {
+    WebBrowser.openBrowserAsync('https://www.tribalapp.me');
   };
 
   _handleHelpPress = () => {
@@ -101,11 +99,11 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#47FC98',
   },
   developmentModeText: {
     marginBottom: 20,
-    color: 'rgba(0,0,0,0.4)',
+    color: '#148BFD',
     fontSize: 14,
     lineHeight: 19,
     textAlign: 'center',
